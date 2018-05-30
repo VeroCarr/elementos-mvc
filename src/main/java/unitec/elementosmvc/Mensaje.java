@@ -17,10 +17,15 @@ public class Mensaje {
     @Id
     private String id;
     private String cuerpo;
-    
     private LocalDate fecha;
 
     public Mensaje(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public Mensaje(String id, String cuerpo, LocalDate fecha) {
+        this.id = id;
+        this.cuerpo = cuerpo;
         this.fecha = fecha;
     }
 
@@ -29,8 +34,7 @@ public class Mensaje {
         this.fecha = fecha;
     }
     
-    
-
+    //constructor de defecto
     public Mensaje() {
     }
 
@@ -38,12 +42,8 @@ public class Mensaje {
         this.cuerpo = cuerpo;
     }
 
-    Mensaje(LocalDate fecha, String mi_primer_mensaje) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
  
+
 
     public String getCuerpo() {
         return cuerpo;
@@ -68,6 +68,11 @@ public class Mensaje {
 
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
+    }
+
+    @Override
+    public String toString() {
+        return "Mensaje{" + "id=" + id + ", cuerpo=" + cuerpo + ", fecha=" + fecha + '}';
     }
     
     

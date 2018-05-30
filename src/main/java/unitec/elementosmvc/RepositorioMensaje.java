@@ -11,6 +11,11 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  *
  * @author T-107
  */
+//interface que hereda a otra interface 
+
 public interface RepositorioMensaje extends MongoRepository<Mensaje, String> {
+    //puede haber metodos implicitamente abstractos. no puede haber logica 
+    //la logica lo hace el mongoRepository
+    public Mensaje findByCuerpo(String cuerpo);
     
 }
