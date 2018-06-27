@@ -9,11 +9,7 @@ package unitec.elementosmvc;
  *
  * @author T-107
  */
-public class Nomina implements Tarjeta222 {
-
-    @Override
-    public void obtenerSaldo() {
-        System.out.println("Tu saldo es 20,000");
-    }
-    
+public interface Tarjeta222 {
+    //no se puede poner metodos 
+    public void obtenerSaldo();
 }

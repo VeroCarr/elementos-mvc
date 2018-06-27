@@ -5,15 +5,14 @@
  */
 package unitec.elementosmvc;
 
+import unitec.elementosmvc.Cliente;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
 /**
  *
  * @author T-107
  */
-public class Nomina implements Tarjeta222 {
-
-    @Override
-    public void obtenerSaldo() {
-        System.out.println("Tu saldo es 20,000");
-    }
-    
+public interface RepositorioCliente extends MongoRepository<Cliente, String> {
+       public Cliente findByNombre(String nombre);
+       
 }

@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 //
 @Configuration
 public class ServicioTarjeta {
-    Tarjeta obtenerSaldo(){
+    Tarjeta222 obtenerSaldo(){
         return new Debito();
     }
 }
